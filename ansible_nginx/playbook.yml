@@ -1,18 +1,14 @@
 ---
 - hosts: debian_server
   become: yes
-  vars:
-    nginx_user: www-data
-    server_name: "192.168.2.199"
-    ssl_cert: "/etc/ssl/certs/nginx-selfsigned.crt"
-    ssl_key: "/etc/ssl/private/nginx-selfsigned.key"
-
+  vars_files:
+    - vars/nginx_vars.yml
+    
   tasks:
     - name: Install NGINX
       apt:
         name: nginx
         state: latest
-      notify: restart nginx
 
     - name: Generate SSL certificate
       command: |
@@ -27,7 +23,6 @@
       template:
         src: nginx.conf.j2
         dest: /etc/nginx/nginx.conf
-      notify: restart nginx
 
     - name: Deploy HTML page
       template:
@@ -37,15 +32,14 @@
         group: "{{ nginx_user }}"
         mode: 0644
 
+    - name: Restart nginx
+      systemd:
+        name: nginx
+        state: restarted
+        enabled: yes
+
     - name: Verify service availability
       wait_for:
         port: "{{ item }}"
         timeout: 10
       loop: [80, 443]
-
-  handlers:
-    - name: restart nginx
-      systemd:
-        name: nginx
-        state: restarted
-        enabled: yes
