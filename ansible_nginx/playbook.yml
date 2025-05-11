@@ -1,0 +1,53 @@
+# playbook.yml
+---
+- hosts: debian_servers
+  become: yes
+  vars:
+    nginx_user: www-data
+    server_name: "192.168.2.199"
+    ssl_cert: "/etc/ssl/certs/nginx-selfsigned.crt"
+    ssl_key: "/etc/ssl/private/nginx-selfsigned.key"
+
+  tasks:
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: latest
+      notify: restart nginx
+
+    - name: Generate SSL certificate
+      command: |
+        openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+        -keyout {{ ssl_key }} \
+        -out {{ ssl_cert }} \
+        -subj "/CN={{ server_name }}"
+      args:
+        creates: "{{ ssl_cert }}"
+
+    - name: Configure NGINX
+      template:
+        src: nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+      notify: restart nginx
+
+    - name: Deploy HTML page
+      template:
+        src: index.html.j2
+        dest: /var/www/html/index.html
+        owner: "{{ nginx_user }}"
+        group: "{{ nginx_user }}"
+        mode: 0644
+
+    - name: Verify service availability
+      wait_for:
+        port: "{{ item }}"
+        timeout: 10
+      loop: [80, 443]
+      delegate_to: localhost
+
+  handlers:
+    - name: restart nginx
+      systemd:
+        name: nginx
+        state: restarted
+        enabled: yes
