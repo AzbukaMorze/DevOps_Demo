@@ -1,6 +1,5 @@
-# playbook.yml
 ---
-- hosts: debian_servers
+- hosts: debian_server
   become: yes
   vars:
     nginx_user: www-data
@@ -43,7 +42,6 @@
         port: "{{ item }}"
         timeout: 10
       loop: [80, 443]
-      delegate_to: localhost
 
   handlers:
     - name: restart nginx
