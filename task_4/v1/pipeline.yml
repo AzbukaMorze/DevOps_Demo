@@ -1,0 +1,67 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: [self-hosted, Linux, X64]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: my-nginx-app:latest
+
+  deploy:
+    name: Deploy
+    runs-on: [self-hosted, Linux, X64]
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Start new containers
+
+        run: docker compose down && docker compose up -d --build
+
+      - name: Wait for nginx to be ready
+
+        run: |
+
+          echo "Waiting for nginx to start..."
+
+          for i in {1..10}; do
+
+            if curl -vk https://localhost:443; then
+
+              echo "Nginx is up and running!"
+
+              exit 0
+
+            else
+
+              echo "Waiting for nginx..."
+
+              sleep 3
+
+            fi
+
+          done
+
+          echo "Nginx did not start in time"
+
+          exit 1
