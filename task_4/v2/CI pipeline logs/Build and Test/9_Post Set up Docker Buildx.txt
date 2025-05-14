@@ -1,0 +1,10 @@
+﻿2025-05-14T18:22:11.7988276Z Post job cleanup.
+2025-05-14T18:22:12.0152186Z ##[group]Removing builder
+2025-05-14T18:22:12.2670892Z [command]/usr/bin/docker buildx rm builder-bc1c4e14-cace-4f56-bbcc-643abd4dfdbb
+2025-05-14T18:22:12.9051258Z builder-bc1c4e14-cace-4f56-bbcc-643abd4dfdbb removed
+2025-05-14T18:22:12.9107059Z ##[endgroup]
+2025-05-14T18:22:12.9111787Z ##[group]Cleaning up certificates
+2025-05-14T18:22:12.9112634Z ##[endgroup]
+2025-05-14T18:22:12.9114018Z ##[group]Post cache
+2025-05-14T18:22:12.9119954Z State not set
+2025-05-14T18:22:12.9122899Z ##[endgroup]

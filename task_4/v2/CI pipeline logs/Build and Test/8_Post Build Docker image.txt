@@ -1,0 +1,27 @@
+﻿2025-05-14T18:22:03.7591694Z Post job cleanup.
+2025-05-14T18:22:03.9795470Z ##[group]Generating build summary
+2025-05-14T18:22:04.2048053Z exporting build record to /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-slJsYW/export
+2025-05-14T18:22:07.4010179Z [command]/usr/bin/mkfifo /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-slJsYW/buildx-in-QH0jDl.fifo
+2025-05-14T18:22:07.4117705Z [command]/usr/bin/mkfifo /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-slJsYW/buildx-out-zIhbfU.fifo
+2025-05-14T18:22:07.4208627Z [command]docker buildx --builder builder-bc1c4e14-cace-4f56-bbcc-643abd4dfdbb dial-stdio
+2025-05-14T18:22:07.4240434Z [command]docker run --rm -i -v /home/serg/.docker/buildx/refs:/buildx-refs -v /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-slJsYW/export:/out docker.io/dockereng/export-build:latest --ref-state-dir=/buildx-refs --node=builder-bc1c4e14-cace-4f56-bbcc-643abd4dfdbb/builder-bc1c4e14-cace-4f56-bbcc-643abd4dfdbb0 --ref=ro468u4khbivkvnvi92jumqsz --uid=1000 --gid=1000
+2025-05-14T18:22:10.0261438Z Process "docker run" exited with code 0
+2025-05-14T18:22:10.0266395Z Parsing /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-slJsYW/export/summary.json
+2025-05-14T18:22:10.0267356Z Build record written to /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-slJsYW/export/AzbukaMorze~Docker-flow~RO468U.dockerbuild (27.09 KB)
+2025-05-14T18:22:10.0294383Z Uploading AzbukaMorze~Docker-flow~RO468U.dockerbuild to blob storage
+2025-05-14T18:22:10.0737562Z Process "buildx dial-stdio" was killed with signal SIGKILL
+2025-05-14T18:22:10.0738173Z ERROR: read unix @->/run/docker.sock: use of closed network connection
+2025-05-14T18:22:10.5268150Z Beginning upload of artifact content to blob storage
+2025-05-14T18:22:10.5349909Z Uploaded bytes 27736
+2025-05-14T18:22:11.2219893Z Finished uploading artifact content to blob storage!
+2025-05-14T18:22:11.2223068Z SHA256 hash of uploaded artifact is 5f274797bd4bf6b6c6d849b8417a4d31d084eb684d7203867883e1ed45f3587a
+2025-05-14T18:22:11.2223877Z Finalizing artifact upload
+2025-05-14T18:22:11.7716978Z Artifact successfully finalized (3125271447)
+2025-05-14T18:22:11.7721201Z Artifact download URL: https://github.com/AzbukaMorze/Docker-flow/actions/runs/15028154167/artifacts/3125271447
+2025-05-14T18:22:11.7732725Z Writing summary
+2025-05-14T18:22:11.7757338Z ##[endgroup]
+2025-05-14T18:22:11.7757906Z ##[group]Removing temp folder /home/serg/actions-runner/_work/_temp/docker-actions-toolkit-fRaVn0
+2025-05-14T18:22:11.7768189Z ##[endgroup]
+2025-05-14T18:22:11.7782822Z ##[group]Post cache
+2025-05-14T18:22:11.7783114Z State not set
+2025-05-14T18:22:11.7783453Z ##[endgroup]

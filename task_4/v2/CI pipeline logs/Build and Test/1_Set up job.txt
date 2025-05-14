@@ -1,0 +1,16 @@
+﻿2025-05-14T18:21:13.6461173Z Current runner version: '2.323.0'
+2025-05-14T18:21:13.6468935Z Runner name: 'SergeyXubuntu'
+2025-05-14T18:21:13.6469826Z Machine name: 'serg-VirtualBox'
+2025-05-14T18:21:13.6472040Z ##[group]GITHUB_TOKEN Permissions
+2025-05-14T18:21:13.6474177Z Contents: read
+2025-05-14T18:21:13.6474630Z Metadata: read
+2025-05-14T18:21:13.6475169Z Packages: read
+2025-05-14T18:21:13.6475562Z ##[endgroup]
+2025-05-14T18:21:13.6477470Z Secret source: Actions
+2025-05-14T18:21:13.6478355Z Prepare workflow directory
+2025-05-14T18:21:13.7051795Z Prepare all required actions
+2025-05-14T18:21:13.7079562Z Getting action download info
+2025-05-14T18:21:14.3496440Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2025-05-14T18:21:15.3470891Z Download action repository 'docker/setup-buildx-action@v3' (SHA:b5ca514318bd6ebac0fb2aedd5d36ec1b5c232a2)
+2025-05-14T18:21:17.7109022Z Download action repository 'docker/build-push-action@v6' (SHA:14487ce63c7a62a4a324b0bfb37086795e31c6c1)
+2025-05-14T18:21:20.0932645Z Complete job name: Build and Test
