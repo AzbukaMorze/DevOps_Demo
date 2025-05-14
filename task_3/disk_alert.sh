@@ -12,9 +12,9 @@ if [ ! -f "$CONFIG_FILE" ]; then
 fi
 source "$CONFIG_FILE"
 
-ALERT=70
+ALERT=85
 
-df -H | grep -vE '^Filesystem|tmpfs|cdrom|loop|udev' | awk '{ print $5 " " $1 }' | while read -r output; do
+df -H | grep -vE '/dev/sda2' | awk '{ print $5 " " $1 }' | while read -r output; do
     usep=$(echo "$output" | awk '{ print $1}' | cut -d'%' -f1)
     partition=$(echo "$output" | awk '{ print $2 }')
 
