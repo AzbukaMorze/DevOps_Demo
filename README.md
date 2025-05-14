@@ -20,7 +20,7 @@
 
     Скриншот/лог выполнения плейбука:
 
-    ![лог выполнения плейбука](https://github.com/AzbukaMorze/DevOps_Demo/blob/main/images/Picture1.png)
+![лог выполнения плейбука](https://github.com/AzbukaMorze/DevOps_Demo/blob/main/images/Picture1.png)
 
     Код плейбука и шаблоны находятся в папке task_1.
 
