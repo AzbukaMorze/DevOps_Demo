@@ -1,0 +1,66 @@
+﻿2025-05-14T18:22:25.6282910Z ##[group]Run actions/checkout@v4
+2025-05-14T18:22:25.6284169Z with:
+2025-05-14T18:22:25.6284997Z   repository: AzbukaMorze/Docker-flow
+2025-05-14T18:22:25.6286039Z   token: ***
+2025-05-14T18:22:25.6286661Z   ssh-strict: true
+2025-05-14T18:22:25.6287252Z   ssh-user: git
+2025-05-14T18:22:25.6287863Z   persist-credentials: true
+2025-05-14T18:22:25.6288555Z   clean: true
+2025-05-14T18:22:25.6289450Z   sparse-checkout-cone-mode: true
+2025-05-14T18:22:25.6290306Z   fetch-depth: 1
+2025-05-14T18:22:25.6290912Z   fetch-tags: false
+2025-05-14T18:22:25.6291520Z   show-progress: true
+2025-05-14T18:22:25.6292135Z   lfs: false
+2025-05-14T18:22:25.6292712Z   submodules: false
+2025-05-14T18:22:25.6293346Z   set-safe-directory: true
+2025-05-14T18:22:25.6294429Z ##[endgroup]
+2025-05-14T18:22:25.7395659Z Syncing repository: AzbukaMorze/Docker-flow
+2025-05-14T18:22:25.7398130Z ##[group]Getting Git version info
+2025-05-14T18:22:25.7399374Z Working directory is '/home/serg/actions-runner/_work/Docker-flow/Docker-flow'
+2025-05-14T18:22:25.7401051Z [command]/usr/bin/git version
+2025-05-14T18:22:25.7437688Z git version 2.45.2
+2025-05-14T18:22:25.7468934Z ##[endgroup]
+2025-05-14T18:22:25.7496646Z Copying '/home/serg/.gitconfig' to '/home/serg/actions-runner/_work/_temp/3411cdea-2c3c-42e9-acb6-8c4e02075ccf/.gitconfig'
+2025-05-14T18:22:25.7529832Z Temporarily overriding HOME='/home/serg/actions-runner/_work/_temp/3411cdea-2c3c-42e9-acb6-8c4e02075ccf' before making global git config changes
+2025-05-14T18:22:25.7536446Z Adding repository directory to the temporary git global config as a safe directory
+2025-05-14T18:22:25.7541137Z [command]/usr/bin/git config --global --add safe.directory /home/serg/actions-runner/_work/Docker-flow/Docker-flow
+2025-05-14T18:22:25.7610829Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-05-14T18:22:25.7647595Z https://github.com/AzbukaMorze/Docker-flow
+2025-05-14T18:22:25.7678793Z ##[group]Removing previously created refs, to avoid conflicts
+2025-05-14T18:22:25.7684807Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2025-05-14T18:22:25.7721952Z refs/heads/main
+2025-05-14T18:22:25.7738789Z [command]/usr/bin/git checkout --detach
+2025-05-14T18:22:25.7795602Z HEAD is now at 830a445 add(CD pipeline): name to CD pipe
+2025-05-14T18:22:25.7862072Z [command]/usr/bin/git branch --delete --force main
+2025-05-14T18:22:25.7904797Z Deleted branch main (was 830a445).
+2025-05-14T18:22:25.7976867Z ##[endgroup]
+2025-05-14T18:22:25.7977593Z [command]/usr/bin/git submodule status
+2025-05-14T18:22:25.8450681Z ##[group]Cleaning the repository
+2025-05-14T18:22:25.8451794Z [command]/usr/bin/git clean -ffdx
+2025-05-14T18:22:25.8503928Z [command]/usr/bin/git reset --hard HEAD
+2025-05-14T18:22:25.8563798Z HEAD is now at 830a445 add(CD pipeline): name to CD pipe
+2025-05-14T18:22:25.8573196Z ##[endgroup]
+2025-05-14T18:22:25.8574279Z ##[group]Disabling automatic garbage collection
+2025-05-14T18:22:25.8581901Z [command]/usr/bin/git config --local gc.auto 0
+2025-05-14T18:22:25.8630559Z ##[endgroup]
+2025-05-14T18:22:25.8632799Z ##[group]Setting up auth
+2025-05-14T18:22:25.8638719Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-05-14T18:22:25.8689266Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-05-14T18:22:25.9135787Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-05-14T18:22:25.9192812Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-05-14T18:22:25.9654437Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-05-14T18:22:25.9739187Z ##[endgroup]
+2025-05-14T18:22:25.9741556Z ##[group]Fetching the repository
+2025-05-14T18:22:25.9751322Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +830a445678a70b5c31a0ca1f2cd35d17438e6a67:refs/remotes/origin/main
+2025-05-14T18:22:26.5612461Z ##[endgroup]
+2025-05-14T18:22:26.5613023Z ##[group]Determining the checkout info
+2025-05-14T18:22:26.5613349Z ##[endgroup]
+2025-05-14T18:22:26.5620737Z [command]/usr/bin/git sparse-checkout disable
+2025-05-14T18:22:26.5707676Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-05-14T18:22:26.5758031Z ##[group]Checking out the ref
+2025-05-14T18:22:26.5764395Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-05-14T18:22:26.5843982Z Switched to a new branch 'main'
+2025-05-14T18:22:26.5850705Z branch 'main' set up to track 'origin/main'.
+2025-05-14T18:22:26.5851852Z ##[endgroup]
+2025-05-14T18:22:26.5915585Z [command]/usr/bin/git log -1 --format=%H
+2025-05-14T18:22:26.5964154Z 830a445678a70b5c31a0ca1f2cd35d17438e6a67

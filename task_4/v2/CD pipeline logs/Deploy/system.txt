@@ -1,0 +1,4 @@
+2025-05-14T18:22:19.9885017Z Requested labels: self-hosted, Linux, X64
+2025-05-14T18:22:19.9885017Z Job defined at: AzbukaMorze/Docker-flow/.github/workflows/CI Pipeline.yml@refs/heads/main
+2025-05-14T18:22:19.9885017Z Waiting for a runner to pick up this job...
+2025-05-14T18:22:20.3152551Z Job is about to start running on the runner: SergeyXubuntu

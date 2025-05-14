@@ -1,0 +1,62 @@
+﻿2025-05-14T18:22:26.6177498Z ##[group]Run docker compose down
+2025-05-14T18:22:26.6177802Z [36;1mdocker compose down[0m
+2025-05-14T18:22:26.6178011Z [36;1mdocker compose up -d --build[0m
+2025-05-14T18:22:26.6203885Z shell: /usr/bin/bash -e {0}
+2025-05-14T18:22:26.6204143Z ##[endgroup]
+2025-05-14T18:22:26.8454014Z time="2025-05-14T21:22:26+03:00" level=warning msg="/home/serg/actions-runner/_work/Docker-flow/Docker-flow/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2025-05-14T18:22:26.8503232Z  Container docker-flow-nginx-1  Stopping
+2025-05-14T18:22:27.2454671Z  Container docker-flow-nginx-1  Stopped
+2025-05-14T18:22:27.2456454Z  Container docker-flow-nginx-1  Removing
+2025-05-14T18:22:27.2754241Z  Container docker-flow-nginx-1  Removed
+2025-05-14T18:22:27.2779344Z  Network docker-flow_default  Removing
+2025-05-14T18:22:27.5819654Z  Network docker-flow_default  Removed
+2025-05-14T18:22:27.7386402Z time="2025-05-14T21:22:27+03:00" level=warning msg="/home/serg/actions-runner/_work/Docker-flow/Docker-flow/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2025-05-14T18:22:27.7483025Z Compose can now delegate builds to bake for better performance.
+2025-05-14T18:22:27.7483865Z  To do so, set COMPOSE_BAKE=true.
+2025-05-14T18:22:28.1842353Z #0 building with "default" instance using docker driver
+2025-05-14T18:22:28.1848503Z 
+2025-05-14T18:22:28.1849425Z #1 [nginx internal] load build definition from Dockerfile
+2025-05-14T18:22:28.1849753Z #1 transferring dockerfile: 224B 0.0s done
+2025-05-14T18:22:28.1849974Z #1 DONE 0.1s
+2025-05-14T18:22:28.1850068Z 
+2025-05-14T18:22:28.1850907Z #2 [nginx internal] load metadata for docker.io/library/nginx:stable
+2025-05-14T18:22:28.1852173Z #2 DONE 0.0s
+2025-05-14T18:22:28.1852881Z 
+2025-05-14T18:22:28.1853949Z #3 [nginx internal] load .dockerignore
+2025-05-14T18:22:28.1856773Z #3 transferring context: 2B done
+2025-05-14T18:22:28.1856989Z #3 DONE 0.0s
+2025-05-14T18:22:28.3329972Z 
+2025-05-14T18:22:28.3332743Z #4 [nginx 1/5] FROM docker.io/library/nginx:stable
+2025-05-14T18:22:28.3333153Z #4 DONE 0.0s
+2025-05-14T18:22:28.3334182Z 
+2025-05-14T18:22:28.3336358Z #5 [nginx internal] load build context
+2025-05-14T18:22:28.3336594Z #5 transferring context: 118B done
+2025-05-14T18:22:28.3336762Z #5 DONE 0.0s
+2025-05-14T18:22:28.3336834Z 
+2025-05-14T18:22:28.3336956Z #6 [nginx 2/5] COPY nginx.conf /etc/nginx/conf.d/default.conf
+2025-05-14T18:22:28.3337245Z #6 CACHED
+2025-05-14T18:22:28.3337341Z 
+2025-05-14T18:22:28.3337436Z #7 [nginx 3/5] COPY ssl/cert.pem /etc/nginx/ssl/cert.pem
+2025-05-14T18:22:28.3337629Z #7 CACHED
+2025-05-14T18:22:28.3337718Z 
+2025-05-14T18:22:28.3337799Z #8 [nginx 4/5] COPY ssl/key.pem /etc/nginx/ssl/key.pem
+2025-05-14T18:22:28.3337998Z #8 CACHED
+2025-05-14T18:22:28.3338064Z 
+2025-05-14T18:22:28.3338159Z #9 [nginx 5/5] RUN mkdir -p /usr/share/nginx/html
+2025-05-14T18:22:28.3338397Z #9 CACHED
+2025-05-14T18:22:28.3338547Z 
+2025-05-14T18:22:28.3338656Z #10 [nginx] exporting to image
+2025-05-14T18:22:28.3338876Z #10 exporting layers done
+2025-05-14T18:22:28.3339224Z #10 writing image sha256:e34d7ea537aa97c4fca349a12f2a929647f5fae651695220214d0382ae79a057 done
+2025-05-14T18:22:28.3339566Z #10 naming to docker.io/library/docker-flow-nginx done
+2025-05-14T18:22:28.3339772Z #10 DONE 0.0s
+2025-05-14T18:22:28.3339856Z 
+2025-05-14T18:22:28.3339940Z #11 [nginx] resolving provenance for metadata file
+2025-05-14T18:22:28.3397979Z  nginx  Built
+2025-05-14T18:22:28.3398151Z #11 DONE 0.0s
+2025-05-14T18:22:28.3438093Z  Network docker-flow_default  Creating
+2025-05-14T18:22:28.4842806Z  Network docker-flow_default  Created
+2025-05-14T18:22:28.4858336Z  Container docker-flow-nginx-1  Creating
+2025-05-14T18:22:28.6582996Z  Container docker-flow-nginx-1  Created
+2025-05-14T18:22:28.6604500Z  Container docker-flow-nginx-1  Starting
+2025-05-14T18:22:29.2302526Z  Container docker-flow-nginx-1  Started
