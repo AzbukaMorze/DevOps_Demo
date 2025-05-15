@@ -31,6 +31,13 @@ resource "yandex_compute_disk" "boot-disk" {
   image_id = "fd86601pa1f50ta9dffg"
 }
 
+data "template_file" "user_data" {
+  template = file("${path.module}/meta.tpl")
+  vars = {
+    ssh_key = var.ssh_key
+  }
+}
+
 resource "yandex_compute_instance" "vm-1" {
   name        = "terraform-vm"
   platform_id = "standard-v1"
@@ -51,6 +58,6 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   metadata = {
-    user-data = file("meta.txt")
+    "user-data" = data.template_file.user_data.rendered
   }
 }

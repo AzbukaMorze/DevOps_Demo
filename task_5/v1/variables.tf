@@ -27,3 +27,8 @@ variable "yandex_folder_id" {
   description = "ID папки Yandex Cloud"
   type        = string
 }
+
+variable "ssh_key" {
+  description = "Публичный SSH ключ"
+  type        = string
+}
