@@ -51,6 +51,6 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   metadata = {
-    ssh-keys = file("meta.txt")
+    user-data = file("meta.txt")
   }
 }

@@ -129,5 +129,27 @@
     Скриншоты из панели управления Yandex Cloud, подтверждающие создание ресурсов:
 
 ![Скриншот создания ВМ](images/Picture10.png)
+
+=====================================================
+
+![Скриншот создания ВМ_1](images/Picture11.png)
     
-    Конфигурационные файлы Terraform и вспомогательные файлы находятся в папке task_5.
+Конфигурационные файлы Terraform и вспомогательные файлы находятся в папке task_5.
+
+    В версии 2 проекта terraform при запуске комманды terraform init получаю ответ:
+    
+    <some_home_dir> terraform init
+    Initializing the backend...
+    Initializing modules...
+    Initializing provider plugins...
+    - Reusing previous version of yandex-cloud/yandex from the dependency lock file
+    - Finding latest version of hashicorp/yandex...
+    - Using previously-installed yandex-cloud/yandex v0.141.0
+    ╷
+    │ Error: Failed to query available provider packages
+    │ 
+    │ Could not retrieve the list of available versions for provider hashicorp/yandex: provider
+    │ registry.terraform.io/hashicorp/yandex was not found in any of the search locations
+    │
+    │   - provider mirror at https://terraform-mirror.yandexcloud.net/
+    ╵ 

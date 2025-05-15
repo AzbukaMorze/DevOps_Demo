@@ -1,8 +1,7 @@
-#cloud-config
 users:
-  - name: SergeyUbuntu
+  - name: serg
     groups: sudo
     shell: /bin/bash
     sudo: 'ALL=(ALL) NOPASSWD:ALL'
     ssh_authorized_keys:
-      - ${SSH_KEY}
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP7rqVmUd6JgSDkkfSWT0g/9+8tr0lr68X1jLdHFwJWq user@WIN-6D4878E68AI

@@ -18,6 +18,6 @@ resource "yandex_compute_instance" "this" {
   }
 
   metadata = {
-    ssh-keys = file(var.metadata_file)
+    user-data = file(var.metadata_file)
   }
 }
