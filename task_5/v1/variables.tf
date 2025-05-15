@@ -1,16 +1,16 @@
 variable "yandex_zone" {
   description = "Зона доступности Yandex Cloud"
-  default     = "ru-central1-b"
+  default     = "ru-central1-d"
 }
 
 variable "vm_cores" {
   description = "Количество vCPU для ВМ"
-  default     = 4
+  default     = 2
 }
 
 variable "vm_memory" {
   description = "Объем RAM для ВМ (ГБ)"
-  default     = 4
+  default     = 2
 }
 
 variable "boot_disk_size" {
@@ -25,10 +25,5 @@ variable "yandex_token" {
 
 variable "yandex_folder_id" {
   description = "ID папки Yandex Cloud"
-  type        = string
-}
-
-variable "ssh_key" {
-  description = "Публичный SSH ключ"
   type        = string
 }
