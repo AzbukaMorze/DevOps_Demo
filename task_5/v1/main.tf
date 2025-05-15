@@ -28,12 +28,12 @@ resource "yandex_compute_disk" "boot-disk" {
   type     = "network-hdd"
   zone     = var.yandex_zone
   size     = var.boot_disk_size
-  image_id = "fd8136cthbfr503tjj72"
+  image_id = "fd86601pa1f50ta9dffg"
 }
 
 resource "yandex_compute_instance" "vm-1" {
   name        = "terraform-vm"
-  platform_id = "standard-v3"
+  platform_id = "standard-v1"
   zone        = var.yandex_zone
 
   resources {
