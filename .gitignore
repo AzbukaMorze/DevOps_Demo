@@ -1,2 +1,12 @@
+#[general]
 *.conf
 *.log
+
+#[terraform]
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+terraform.tfvars
+.terraform/
+.terraform.lock.hcl
+my_ssh_key.pub
