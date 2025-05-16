@@ -1,6 +1,6 @@
 ---
 - hosts: debian_server
-  become: yes
+  become: true
   vars_files:
     - vars/nginx_vars.yml
     
