@@ -9,4 +9,4 @@ crash.log
 terraform.tfvars
 .terraform/
 .terraform.lock.hcl
-*.pub
+meta.txt

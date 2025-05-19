@@ -23,7 +23,7 @@ module "disk" {
   source    = "./modules/disk"
   size      = var.boot_disk_size
   zone      = var.yandex_zone
-  image_id  = "fd8136cthbfr503tjj72"
+  image_id  = "fd865v46cboopthn7u0k"
 }
 
 module "vm" {
